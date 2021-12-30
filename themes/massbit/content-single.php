@@ -82,7 +82,7 @@
 					?>
 				</div>
 				<div class="mb-entry-footer">
-					If you have any questions or would like to stay updated on our progress, please join our <a href="https://discord.gg/jbaUzJYT" target="_blank">discord</a> and or sign up to our <a href="https://t.me/massbit" target="_blank">newsletter</a>
+					If you have any questions or would like to stay updated on our progress, please join our <a href="https://discord.gg/5ePzAEFNHZ" target="_blank">discord</a> and or sign up to our <a href="https://t.me/massbit" target="_blank">newsletter</a>
 				</div>
 				<?php
 				edit_post_link(__('Edit', 'massbit'), '<span class="edit-link">', '</span>');
