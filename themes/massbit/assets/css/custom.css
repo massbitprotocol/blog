@@ -1151,7 +1151,7 @@ body.testnet .mb-banner-testnet-inner {
     font-size: 18px;
     line-height: 23px;
     color: #F1F6FF;
-    background-image: url(/images/banner-testnet-bg.svg), url(/images/banner-testnet-bg2.svg);
+    background-image: url(../images/banner-testnet-bg.svg), url(../images/banner-testnet-bg2.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: bottom 0 left -21px, bottom 0 right -33px;
     padding: 26px 32px 26px 78px;
