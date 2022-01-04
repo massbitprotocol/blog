@@ -192,7 +192,7 @@
 				<span><i class="fas fa-arrow-up"></i></span>
 			</a>
 
-			<div class="mb-right-box-wrap">
+			<div class="mb-right-box-wrap" style="display:none !important;opacity:0;z-index:-1">
 				<div class="mb-right-box">
 					<div class="mb-right-box-logo">
 						<img src="<?php echo esc_url(get_template_directory_uri() .  '/assets/images/decor.svg'); ?>" height="24" width="22" alt="MassBit logo">

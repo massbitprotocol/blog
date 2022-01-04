@@ -40,10 +40,10 @@
         $('#wr_loading').fadeOut();
     }, 800)
 
-    window.setTimeout(() => {
-        $('.mb-right-box-wrap').fadeIn(300);
-        $('.mb-right-box-wrap').addClass('show');
-    }, 1500)
+    // window.setTimeout(() => {
+    //     $('.mb-right-box-wrap').fadeIn(300);
+    //     $('.mb-right-box-wrap').addClass('show');
+    // }, 1500)
 
     window.addEventListener("scroll", handleToggleScrollToTop);
 
