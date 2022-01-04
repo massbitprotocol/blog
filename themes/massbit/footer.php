@@ -223,12 +223,12 @@
 						</a>
 					</div>
 					<a href="#" class="mb-right-box-close" id="MBRightBoxClose">
-						<img src="images/close-icon2.svg" width="14" height="14" alt="">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/close-icon2.svg'); ?>" width="14" height="14" alt="">
 					</a>
 				</div>
 			</div>
 			<a href="#" id="MBRightBoxOpen">
-				<img src="images/open-icon2.svg" width="14" height="14" alt="">
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/open-icon2.svg'); ?>" width="14" height="14" alt="">
 			</a>
 			
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
