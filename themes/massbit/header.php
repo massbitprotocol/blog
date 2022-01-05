@@ -16,23 +16,16 @@ $navbar_position = get_theme_mod('navbar_position', 'static'); // Get custom met
 $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-value.
 ?>
 
-<body <?php body_class('testnet'); ?>>
+<body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<a href="#main" class="visually-hidden-focusable"><?php esc_html_e('Skip to main content', 'massbit'); ?></a>
 	<div id="wrapper">
-		<nav id="header" class="navbar navbar-expand-lg navbar-light mb-navbar flex-wrap <?php if (isset($navbar_position) && 'fixed_top' === $navbar_position) : echo ' fixed-top';
+		<nav id="header" class="navbar navbar-expand-lg navbar-light mb-navbar <?php if (isset($navbar_position) && 'fixed_top' === $navbar_position) : echo ' fixed-top';
 																				elseif (isset($navbar_position) && 'fixed_bottom' === $navbar_position) : echo ' fixed-bottom';
 																				endif;
 																				if (is_home() || is_front_page()) : echo ' home';
 																				endif; ?>">
-		<div class="mb-banner-testnet w-100">
-            <div class="container">
-                <div class="mb-banner-testnet-inner">
-                    <div>Come join our MassBit Route <span>Testnet</span> from <b>January 4th</b> until <b>February 21st, 2022</b> 🎉 </div>
-                    <a href="https://massbit.io/massbit-route.html#ExploreMassBitRoute" class="btn btn-link-white btn-right-icon"><span>Join Testnet</span></a>
-                </div>
-            </div>
-        </div>
+
 			<div class="container">
 				<a class="navbar-brand" href="https://massbit.io/" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
 					<?php
