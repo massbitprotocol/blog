@@ -29,7 +29,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 				<div class="container">
 					<div class="mb-banner-testnet-inner">
 						<div>Come join our MassBit Route <span>Testnet</span> from <b>February 9th</b> until <b>March 25th, 2022</b> 🎉 </div>
-						<a href="massbit-route.html#ExploreMassBitRoute" class="btn btn-link-white btn-right-icon">
+						<a href="https://massbit.io/massbit-route.html#ExploreMassBitRoute" class="btn btn-link-white btn-right-icon">
 							<span>To learn more, click here</span>
 						</a>
 						<button class="btn-closex" id="btnClosex" type="button"><i class="fas fa-times"></i></button>
