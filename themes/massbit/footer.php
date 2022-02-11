@@ -298,6 +298,10 @@
 						jQuery('#MBRightBoxClose').show();
 						jQuery('#MBRightBoxOpen').hide();
 					})
+					jQuery('#btnClosex').on('click', () => {
+						jQuery('body').removeClass('testnet');
+						jQuery('.mb-banner-testnet').hide(300);
+					})
 				});
 					jQuery('#MBRightBoxClose').on('click', (e) => {
 						e.preventDefault();
@@ -312,6 +316,11 @@
 						jQuery('.mb-right-box-wrap').addClass('show');
 						jQuery('#MBRightBoxClose').show();
 						jQuery('#MBRightBoxOpen').hide();
+					})
+
+					jQuery('#btnClosex').on('click', () => {
+						jQuery('body').removeClass('testnet');
+						jQuery('.mb-banner-testnet').hide(300);
 					})
 			</script>
 			</body>
