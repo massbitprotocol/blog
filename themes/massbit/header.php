@@ -28,7 +28,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 			<div class="mb-banner-testnet w-100">
 				<div class="container">
 					<div class="mb-banner-testnet-inner">
-						<div>MassBit Route <span>Testnet</span> Phase 2 Is Coming 🎉 </div>
+						<div>MassBit Route <span>Testnet</span> Phase 2 Is <b>Coming</b> 🎉 </div>
 						<a href="https://31a5zi2hct7.typeform.com/to/npUpMcFi" class="btn btn-link-white btn-right-icon">
 							<span>Register here</span>
 						</a>
