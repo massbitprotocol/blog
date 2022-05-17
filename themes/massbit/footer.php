@@ -399,11 +399,14 @@
 					if (noticeModalEl) {
 						var noticeModal = new bootstrap.Modal(noticeModalEl, {});
 						window.setTimeout(() => {
-							noticeModal.show();
+							if(!sessionStorage.getItem('isShowPopup')){
+								noticeModal.show();
+							}
 						}, 2000)
 						noticeModalEl.addEventListener('hidden.bs.modal', function (event) {
 							jQuery('body').addClass('testnet');
 							jQuery('.mb-banner-testnet').fadeIn(300);
+        					sessionStorage.setItem('isShowPopup', true);
 						})
 					}
 				});
@@ -415,7 +418,7 @@
 						jQuery('#MBRightBoxOpen').show();
 						jQuery('#MBRightBoxClose').hide();
 				})
-				
+
 				jQuery('#MBRightBoxOpen').on('click', (e) => {
 						e.preventDefault();
 						jQuery('.mb-right-box-wrap').fadeIn(300);
