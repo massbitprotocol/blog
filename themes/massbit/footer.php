@@ -64,7 +64,7 @@
 						<div class="col-lg-5" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
 							<div class="row">
 								<div class="col-lg-12 col-md-6">
-									<h3>GET OUR EXCLUSIVE NEWS IN YOUR INBOX <span class="text-danger">*</span></h3>
+									<h3>SUBCRIBE TO GET THE EXCLUSIVE NEWS</h3>
 									<div class="mb-30">
 										<!-- Begin Sendinblue Form -->
 										<!-- START - We recommend to place the below code in head tag of your website html  -->
@@ -192,7 +192,7 @@
 				<span><i class="fas fa-arrow-up"></i></span>
 			</a>
 
-			<div class="mb-right-box-wrap">
+			<!-- <div class="mb-right-box-wrap">
 				<div class="mb-right-box">
 					<div class="mb-right-box-heading">
 						<div>Questions About The Testnet?</div>
@@ -229,7 +229,7 @@
 			</div>
 			<a href="#" id="MBRightBoxOpen">
 				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/open-icon2.svg'); ?>" width="14" height="14" alt="">
-			</a>
+			</a> -->
 
 			<style>
 				#noticeModal .modal-content {
@@ -323,7 +323,6 @@
 			</div>
 			
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 			<script src="<?php echo esc_url(get_template_directory_uri() .  '/assets/plugins/OwlCarousel2/owl.carousel.min.js'); ?>"></script>
 			<script>
 				window.addEventListener('load', function() {
@@ -376,61 +375,47 @@
 							}
 						}
 					}
-					jQuery('#MBRightBoxClose').on('click', (e) => {
-						e.preventDefault();
-						jQuery('.mb-right-box-wrap').fadeOut(300);
-						jQuery('.mb-right-box-wrap').removeClass('show');
-						jQuery('#MBRightBoxOpen').show();
-						jQuery('#MBRightBoxClose').hide();
-					})
-					jQuery('#MBRightBoxOpen').on('click', (e) => {
-						e.preventDefault();
-						jQuery('.mb-right-box-wrap').fadeIn(300);
-						jQuery('.mb-right-box-wrap').addClass('show');
-						jQuery('#MBRightBoxClose').show();
-						jQuery('#MBRightBoxOpen').hide();
-					})
-					jQuery('#btnClosex').on('click', () => {
-						jQuery('body').removeClass('testnet');
-						jQuery('.mb-banner-testnet').hide(300);
-					})
+					// jQuery('#MBRightBoxClose').on('click', (e) => {
+					// 	e.preventDefault();
+					// 	jQuery('.mb-right-box-wrap').fadeOut(300);
+					// 	jQuery('.mb-right-box-wrap').removeClass('show');
+					// 	jQuery('#MBRightBoxOpen').show();
+					// 	jQuery('#MBRightBoxClose').hide();
+					// })
+					// jQuery('#MBRightBoxOpen').on('click', (e) => {
+					// 	e.preventDefault();
+					// 	jQuery('.mb-right-box-wrap').fadeIn(300);
+					// 	jQuery('.mb-right-box-wrap').addClass('show');
+					// 	jQuery('#MBRightBoxClose').show();
+					// 	jQuery('#MBRightBoxOpen').hide();
+					// })
+					// jQuery('#btnClosex').on('click', () => {
+					// 	jQuery('body').removeClass('testnet');
+					// 	jQuery('.mb-banner-testnet').hide(300);
+					// })
 
-					var noticeModalEl = document.getElementById("noticeModal");
-					if (noticeModalEl) {
-						var noticeModal = new bootstrap.Modal(noticeModalEl, {});
-						window.setTimeout(() => {
-							if(!sessionStorage.getItem('isShowPopup')){
-								noticeModal.show();
-							}
-						}, 2000)
-						noticeModalEl.addEventListener('hidden.bs.modal', function (event) {
-							jQuery('body').addClass('testnet');
-							jQuery('.mb-banner-testnet').fadeIn(300);
-        					sessionStorage.setItem('isShowPopup', true);
-						})
-					}
 				});
 
-				jQuery('#MBRightBoxClose').on('click', (e) => {
-						e.preventDefault();
-						jQuery('.mb-right-box-wrap').fadeOut(300);
-						jQuery('.mb-right-box-wrap').removeClass('show');
-						jQuery('#MBRightBoxOpen').show();
-						jQuery('#MBRightBoxClose').hide();
-				})
+				// jQuery('#MBRightBoxClose').on('click', (e) => {
+				// 		e.preventDefault();
+				// 		jQuery('.mb-right-box-wrap').fadeOut(300);
+				// 		jQuery('.mb-right-box-wrap').removeClass('show');
+				// 		jQuery('#MBRightBoxOpen').show();
+				// 		jQuery('#MBRightBoxClose').hide();
+				// })
 
-				jQuery('#MBRightBoxOpen').on('click', (e) => {
-						e.preventDefault();
-						jQuery('.mb-right-box-wrap').fadeIn(300);
-						jQuery('.mb-right-box-wrap').addClass('show');
-						jQuery('#MBRightBoxClose').show();
-						jQuery('#MBRightBoxOpen').hide();
-				})
+				// jQuery('#MBRightBoxOpen').on('click', (e) => {
+				// 		e.preventDefault();
+				// 		jQuery('.mb-right-box-wrap').fadeIn(300);
+				// 		jQuery('.mb-right-box-wrap').addClass('show');
+				// 		jQuery('#MBRightBoxClose').show();
+				// 		jQuery('#MBRightBoxOpen').hide();
+				// })
 
-				jQuery('#btnClosex').on('click', () => {
-						jQuery('body').removeClass('testnet');
-						jQuery('.mb-banner-testnet').hide(300);
-				})
+				// jQuery('#btnClosex').on('click', () => {
+				// 		jQuery('body').removeClass('testnet');
+				// 		jQuery('.mb-banner-testnet').hide(300);
+				// })
 			</script>
 			</body>
 

@@ -24,5 +24,21 @@ import * as bootstrap from 'bootstrap';
         });
     });
 
-
+    var noticeModalEl = document.getElementById("noticeModal");
+	if (noticeModalEl) {
+		var noticeModal = new bootstrap.Modal(noticeModalEl, {});
+		if (!localStorage.getItem('isShowPopup')) {
+			window.setTimeout(() => {
+				noticeModal.show();
+			}, 2000)
+		} else {
+			$('body').addClass('testnet');
+			$('.mb-banner-testnet').fadeIn(300);
+		}
+		noticeModalEl.addEventListener('hidden.bs.modal', function (event) {
+			$('body').addClass('testnet');
+			$('.mb-banner-testnet').fadeIn(300);
+    		sessionStorage.setItem('isShowPopup', true);
+		})
+	}
 })();
