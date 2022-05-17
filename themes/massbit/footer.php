@@ -323,6 +323,7 @@
 			</div>
 			
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 			<script src="<?php echo esc_url(get_template_directory_uri() .  '/assets/plugins/OwlCarousel2/owl.carousel.min.js'); ?>"></script>
 			<script>
 				window.addEventListener('load', function() {
