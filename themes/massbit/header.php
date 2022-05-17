@@ -15,8 +15,8 @@ $navbar_scheme   = get_theme_mod('navbar_scheme', 'navbar-light bg-light'); // G
 $navbar_position = get_theme_mod('navbar_position', 'static'); // Get custom meta-value.
 $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-value.
 ?>
-
-<body <?php body_class('testnet'); ?>>
+<!-- <?php body_class('testnet'); ?> -->
+<body>
 	<?php wp_body_open(); ?>
 	<a href="#main" class="visually-hidden-focusable"><?php esc_html_e('Skip to main content', 'massbit'); ?></a>
 	<div id="wrapper">
@@ -25,7 +25,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 																				endif;
 																				if (is_home() || is_front_page()) : echo ' home';
 																				endif; ?>">
-			<div class="mb-banner-testnet w-100">
+			<!-- <div class="mb-banner-testnet w-100">
 				<div class="container">
 					<div class="mb-banner-testnet-inner">
 						<div>MassBit Route <span>Testnet</span> Phase 2 Is <b>Coming</b> 🎉 </div>
@@ -35,7 +35,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 						<button class="btn-closex" id="btnClosex" type="button"><i class="fas fa-times"></i></button>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="container">
 				<a class="navbar-brand" href="https://massbit.io/" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
 					<?php

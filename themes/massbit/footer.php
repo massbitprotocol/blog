@@ -230,6 +230,97 @@
 			<a href="#" id="MBRightBoxOpen">
 				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/open-icon2.svg'); ?>" width="14" height="14" alt="">
 			</a>
+
+			<style>
+				#noticeModal .modal-content {
+					background-color: #27319b;
+					background-image: url(<?php echo esc_url(get_template_directory_uri() . '/assets/images/notice-bg.svg'); ?>);
+					background-size: cover;
+					border: 1px solid rgba(5, 12, 114, 0.1);
+					box-shadow: 0px 10px 33px rgba(0, 0, 0, 0.25);
+					border-radius: 16px;
+
+					font-family: "Airbnb Cereal App Medium";
+					font-weight: 700;
+					font-size: 30px;
+					line-height: 40px;
+					color: #f1f6ff;
+				}
+
+				#noticeModal .modal-content .modal-header {
+					border: 0;
+					padding-top: 40px;
+					padding-right: 50px;
+				}
+					
+				#noticeModal .modal-content .modal-header .btn-close {
+					width: 32px;
+					height: 32px;
+					background-image: url(<?php echo esc_url(get_template_directory_uri() . '/assets/images/close-modal-icon.svg'); ?>);
+					background-size: cover;
+					outline: 0;
+					box-shadow: none;
+				}
+				
+				#noticeModal .modal-content .modal-body {
+					padding: 40px 60px 120px;
+				}
+				
+				#noticeModal .modal-content .modal-body .notice-content {
+					margin-bottom: 17px;
+				}
+			
+				#noticeModal .modal-content .modal-body a {
+					letter-spacing: 0.02em;
+					color: #fbaf1d;
+					display: inline-flex;
+					align-items: center;
+				}
+
+				#noticeModal .modal-content .modal-body a span {
+					margin-right: 12px;
+				}
+					
+				@media (max-width: 767px) {
+					#noticeModal .modal-content {
+						font-size: 22px;
+						background-size: 100% 100%;
+					}
+					#noticeModal .modal-content .modal-header {
+						padding-top: 30px;
+						padding-right: 30px;
+					}
+					#noticeModal .modal-content .modal-header .btn-close {
+						width: 20px;
+						height: 20px;
+					}
+					#noticeModal .modal-content .modal-body {
+						padding: 0 30px 30px;
+					}
+				}
+			</style>
+
+			 <!-- Modal -->
+			 <div class="modal fade" id="noticeModal" tabindex="-1" aria-labelledby="noticeModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="notice-content">Come join our MassBit Route Testnet Phase II 🎉</div>
+							<a href="https://docs.massbit.io/massbit-route/testnet-phase-ii-opening" target="_blank">
+								<span>Learn more</span>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M17.707 9.29301L12.707 4.29301C12.316 3.90201 11.684 3.90201 11.293 4.29301C10.902 4.68401 10.902 5.31601 11.293 5.70701L14.586 9.00001H3C2.447 9.00001 2 9.44801 2 10C2 10.552 2.447 11 3 11H14.586L11.293 14.293C10.902 14.684 10.902 15.316 11.293 15.707C11.488 15.902 11.744 16 12 16C12.256 16 12.512 15.902 12.707 15.707L17.707 10.707C18.098 10.316 18.098 9.68401 17.707 9.29301Z"
+										fill="#F1F6FF" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 			
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 			<script src="<?php echo esc_url(get_template_directory_uri() .  '/assets/plugins/OwlCarousel2/owl.carousel.min.js'); ?>"></script>
@@ -302,6 +393,16 @@
 						jQuery('body').removeClass('testnet');
 						jQuery('.mb-banner-testnet').hide(300);
 					})
+
+					var noticeModalEl = document.getElementById("noticeModal");
+					if (noticeModalEl) {
+						var noticeModal = new bootstrap.Modal(noticeModalEl, {});
+						window.onload = function () {
+							window.setTimeout(() => {
+								noticeModal.show();
+							}, 2000)
+						};
+					}
 				});
 					jQuery('#MBRightBoxClose').on('click', (e) => {
 						e.preventDefault();
