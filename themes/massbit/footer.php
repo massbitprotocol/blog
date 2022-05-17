@@ -398,36 +398,36 @@
 					var noticeModalEl = document.getElementById("noticeModal");
 					if (noticeModalEl) {
 						var noticeModal = new bootstrap.Modal(noticeModalEl, {});
-						window.onload = function () {
-							window.setTimeout(() => {
-								noticeModal.show();
-							}, 2000)
-						};
+						window.setTimeout(() => {
+							noticeModal.show();
+						}, 2000)
 						noticeModalEl.addEventListener('hidden.bs.modal', function (event) {
-							$('body').addClass('testnet');
-							$('.mb-banner-testnet').fadeIn(300);
+							jQuery('body').addClass('testnet');
+							jQuery('.mb-banner-testnet').fadeIn(300);
 						})
 					}
 				});
-					jQuery('#MBRightBoxClose').on('click', (e) => {
+
+				jQuery('#MBRightBoxClose').on('click', (e) => {
 						e.preventDefault();
 						jQuery('.mb-right-box-wrap').fadeOut(300);
 						jQuery('.mb-right-box-wrap').removeClass('show');
 						jQuery('#MBRightBoxOpen').show();
 						jQuery('#MBRightBoxClose').hide();
-					})
-					jQuery('#MBRightBoxOpen').on('click', (e) => {
+				})
+				
+				jQuery('#MBRightBoxOpen').on('click', (e) => {
 						e.preventDefault();
 						jQuery('.mb-right-box-wrap').fadeIn(300);
 						jQuery('.mb-right-box-wrap').addClass('show');
 						jQuery('#MBRightBoxClose').show();
 						jQuery('#MBRightBoxOpen').hide();
-					})
+				})
 
-					jQuery('#btnClosex').on('click', () => {
+				jQuery('#btnClosex').on('click', () => {
 						jQuery('body').removeClass('testnet');
 						jQuery('.mb-banner-testnet').hide(300);
-					})
+				})
 			</script>
 			</body>
 
