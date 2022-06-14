@@ -576,7 +576,13 @@ function more_post_ajax()
 								<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_html($images_alt) . '" />
 							</a>
 						</div>
-						<div class="mb-blog-item-time">' . get_the_date() . '</div>
+						<div class="mb-blog-item-time">
+							<div class="mb-blog-item-author">
+								<img src="' . get_avatar( get_the_author_meta( 'ID' )) . '" />
+							</div>
+							<span>by</span>
+							<b>' . get_the_author_meta('display_name', get_the_author_ID()) . ' - ' . get_the_date() . '</b>
+						</div>
 						<div class="mb-blog-item-title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></div>
 						<div class="mb-blog-item-excerpt">' . get_the_excerpt() . '</div>
 						<div class="mb-blog-item-readmore"><a href="' . get_the_permalink() . '">Read More</a></div>

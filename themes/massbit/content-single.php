@@ -9,7 +9,7 @@
 	<div class="mb-entry-breadcrumb">
 		<div class="container">
 			<a href="<?php echo esc_url(home_url()); ?>" class="mb-entry-breadcrumb-home">MassBit Blog /&nbsp;</a>
-			<span>The Fully Decentralized Solution</span>
+			<span><?php the_title(); ?></span>
 		</div>
 	</div>
 	<div class="container">
@@ -32,7 +32,11 @@
 			if ('post' === get_post_type()) :
 			?>
 				<div class="mb-entry-meta">
-					<?php echo get_the_date(); ?>
+					<div class="mb-blog-item-author">
+						<img src="<?php echo get_avatar( get_the_author_meta( 'ID' )) ?>" />
+					</div>
+					<span>by</span>
+					<b><?php echo get_the_author_meta('display_name', get_the_author_ID()); ?> - <?php echo get_the_date(); ?></b>
 				</div><!-- /.entry-meta -->
 				<div class="mb-entry-share">
 					<a href="https://twitter.com/intent/tweet?text=<?php echo esc_url(get_permalink()); ?>" target="_blank" title="Share on Twitter">
@@ -145,7 +149,11 @@
 									<?php endif; ?>
 								</div>
 								<div class="mb-blog-item-time">
-									<?php echo get_the_date(); ?>
+									<div class="mb-blog-item-author">
+										<img src="<?php echo get_avatar( get_the_author_meta( 'ID' )) ?>" />
+									</div>
+									<span>by</span>
+									<b><?php echo get_the_author_meta('display_name', get_the_author_ID()); ?> - <?php echo get_the_date(); ?></b>
 								</div>
 								<div class="mb-blog-item-title">
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
