@@ -577,9 +577,7 @@ function more_post_ajax()
 							</a>
 						</div>
 						<div class="mb-blog-item-time">
-							<div class="mb-blog-item-author">
-								<img src="' . get_avatar( get_the_author_meta( 'ID' )) . '" />
-							</div>
+							<span class="mb-blog-item-author">' . get_avatar( get_the_author_meta( 'ID' )) . '</span>
 							<span>by</span>
 							<b>' . get_the_author_meta('display_name', get_the_author_ID()) . ' - ' . get_the_date() . '</b>
 						</div>

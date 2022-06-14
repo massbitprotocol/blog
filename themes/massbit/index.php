@@ -63,7 +63,9 @@ $page_id = get_option('page_for_posts');
 								<?php endif; ?>
 							</div>
 							<div class="mb-blog-item-time">
-								<?php echo get_the_date(); ?>
+								<span class="mb-blog-item-author"><?php echo get_avatar( get_the_author_meta( 'ID' )) ?></span>
+								<span>by</span>
+								<b><?php echo get_the_author_meta('display_name', get_the_author_ID()); ?> - <?php echo get_the_date(); ?></b>
 							</div>
 							<div class="mb-blog-item-title">
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

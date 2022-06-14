@@ -670,7 +670,7 @@ header::before {
   align-items: center;
 }
 
-.mb-blog-item-time .mb-blog-item-author {
+/* .mb-blog-item-time .mb-blog-item-author {
   width: 16px;
   height: 16px;
   margin-right: 6px;
@@ -681,6 +681,11 @@ header::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
+} */
+.mb-blog-item-author img {
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
 }
 .mb-blog-item-time span {
   font-size: 12px;
